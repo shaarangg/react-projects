@@ -19,7 +19,7 @@ function App() {
       showAlert(true, "pleaser enter a value", "danger")
       console.log("Empty")
     }
-    else if (!name && isEditing) {
+    else if (name && isEditing) {
       setList(
         list.map((item) => {
           if (item.id === editID) {
