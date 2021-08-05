@@ -161,7 +161,7 @@ p{
     cursor: pointer;
     content: var(--clr-primary-5);
     transition: var(--transition);
-    font-size: 0.85rem`;
+    font-size: 0.85rem;
 }
 .submit-btn:hover{
     background-color: var(--clr-primary-5);
