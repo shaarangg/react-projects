@@ -13,7 +13,22 @@ const AppProvider = ({ children }) => {
 	const clearCart = () => {
 		dispatch({ type: "CLEAR_CART" });
 	};
-	return <AppContext.Provider value={{ ...state, clearCart }}>{children}</AppContext.Provider>;
+	const removeItem = (id) => {
+		dispatch({ type: "REMOVE_ITEM", payload: id });
+	};
+	const increaseItem = (id) => {
+		// console.log("increase");
+		dispatch({ type: "INCREASE_ITEM", payload: id });
+	};
+	const decreaseItem = (id) => {
+		// console.log("decrease");
+		dispatch({ type: "DECREASE_ITEM", payload: id });
+	};
+	return (
+		<AppContext.Provider value={{ ...state, clearCart, removeItem, increaseItem, decreaseItem }}>
+			{children}
+		</AppContext.Provider>
+	);
 };
 export const useGlobalContext = () => {
 	return useContext(AppContext);
