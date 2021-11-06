@@ -24,4 +24,4 @@ function CartItem({ id, img, title, price, amount }) {
 	);
 }
 
-export default cartItem;
+export default CartItem;
