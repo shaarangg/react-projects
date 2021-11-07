@@ -39,12 +39,12 @@ const reducer = (state, action) => {
 		total = parseFloat(total.toFixed(2));
 		return { ...state, total, amount };
 	}
-	if (action.type === "LODAING") {
+	if (action.type === "LOADING") {
 		return { ...state, loading: true };
 	}
 	if (action.type === "DISPLAY_ITEMS") {
 		return { ...state, cart: action.payload, loading: false };
 	}
-	throw new Error("No matching action type");
+	throw new Error("Cannot find the same match type");
 };
 export default reducer;

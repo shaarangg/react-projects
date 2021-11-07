@@ -17,11 +17,9 @@ const AppProvider = ({ children }) => {
 		dispatch({ type: "REMOVE_ITEM", payload: id });
 	};
 	const increaseItem = (id) => {
-		// console.log("increase");
 		dispatch({ type: "INCREASE_ITEM", payload: id });
 	};
 	const decreaseItem = (id) => {
-		// console.log("decrease");
 		dispatch({ type: "DECREASE_ITEM", payload: id });
 	};
 
